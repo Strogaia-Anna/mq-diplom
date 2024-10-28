@@ -75,7 +75,6 @@
 }
   
 .header-container {
-  min-height: 450px;
   padding: 30px 0;
 }
 
@@ -84,7 +83,6 @@
   justify-content: space-between;
   align-items: center;
   display: flex;
-  margin-left: 3px;
   margin-right: auto;
 }
 
@@ -96,10 +94,6 @@
   display: none;
 }
 
-.menu {
-  margin-top: -5px;
-}
-
 .menu-list {
   display: flex;
   list-style: none;
@@ -107,6 +101,10 @@
 
 .menu-list-item {
   margin-left: 35px;
+}
+
+.menu-list-item:first-child {
+  margin-left: 0;
 }
 
 .menu-link {
@@ -125,9 +123,7 @@
 .header-text {
   position: relative;
   max-width: 700px;
-  margin-top: 100px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 100px auto;
 }
 
 .text {
@@ -243,6 +239,10 @@
   color: #ffffff;
 }
 
+.trend-title-link:hover {
+  color: #b59f5b;
+}
+
 .main-container {
   display: flex;
   flex-wrap: wrap;
@@ -259,18 +259,15 @@
   display: flex;
   margin-top: 60px;
   justify-content: space-between;
+  gap: 4%;
   align-items: flex-start;
 }
   
 .card:first-child {
-  margin-top: 4px;
+  margin-top: 0;
 }
 
 .card-img {
-  width: 48%;
-}
-
-.card-content {
   width: 48%;
 }
   
@@ -286,8 +283,12 @@
   margin-left: 19px;
 }
 
-.trend-category-link {
-  margin-right: 10px;
+.trend-category-item {
+  padding-right: 10px;
+}
+
+.trend-category-item:last-child {
+  padding-right: 0;
 }
   
 .category-link, .trend-category-link {
@@ -329,7 +330,7 @@
 }
   
 .post-header {
-  margin: -9px 0px 0px 20px;
+  margin: 0 0 0 20px;
 }
   
 .post-header a {
@@ -339,11 +340,14 @@
   
 .card-date {
   display: inline;
-  margin-top: 0px;
-  margin-left: -1px;
   font-size: 12px;
+  line-height: 12px;
   text-align: left;
   color: #888888;
+}
+
+.post-header .card-date {
+  vertical-align: text-top;
 }
   
 .author {
@@ -363,19 +367,16 @@
 }
   
 .card-text p:first-child {
-  margin-top: 0px;
+  margin-top: 0;
 }
   
 .sidebar {
   width: 270px;
-  margin-top: 1px;
-  padding-left: 0px;
+  padding-left: 0;
 }
   
 .section-title {
   position: relative;
-  margin-left: 7px;
-  margin-top: -2px;
   text-transform: uppercase;
   text-align: center;
   font-family: OpenSansBold, Arial, sanf-serif;
@@ -416,7 +417,6 @@
 }
   
 .post-name {
-  margin: 1px 0 0 1px;
   text-transform: uppercase;
   font-size: 14px;
   font-family: OpenSansBold, Arial, sanf-serif;
@@ -542,7 +542,7 @@
 }
   
 .tag-list-item {
-  margin: 7px 4px;
+  margin: 0px 5px 13px 0;
 }
   
 .tag-link {
@@ -607,8 +607,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding-left: 22.5px;
-  padding-right: 21.5px;
+  padding-left: 22px;
+  padding-right: 22px;
 }
 
 .product {
@@ -625,7 +625,7 @@
 
 .product-content {
   outline: 3px solid rgba(181, 159, 91, 0.6);
-  padding: 25px 0px 10px 0px;
+  padding: 25px 0 10px 0;
   outline-offset: 20px;
   margin-top: -15px;
   flex-grow: 1;
@@ -658,9 +658,13 @@
   text-decoration: underline;
 }
 
+.product-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
 .price {
   width: 50%;
-  float: left;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -689,7 +693,7 @@
   
   
 .footer {
-  margin: 4px auto 0 auto;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   display: flex;
@@ -700,57 +704,44 @@
 .social-media-container {
   align-items: center;
   justify-content: center;
+  padding: 30px 0;
   display: flex;
   max-width: 1200px;
-  height: 84px;
   background-color: #f4f7f6;
 }
-  
-.social-media-item {
-  display: inline;
+
+.social-media {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
 }
   
-.social-link-dribbble {
-  margin-right: 20px;
-  margin-top: 4px;
-  margin-left: 32px;
+.social-link-dribbble, .social-link-pinterest, .social-link-tumbler {
   display: inline-block;
   width: 20px;
   height: 20px;
-  background-image: url("../svg/001-dribbble.svg");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.social-link-dribbble {
+  background-image: url("../svg/001-dribbble.svg");
 }
   
 .social-link-pinterest {
-  margin-right: 25px;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
   background-image: url("../svg/001-pinterest.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
   
 .social-link-tumbler {
-  margin-right: 25px;
-  display: inline-block;
-  width: 20px;
-  height: 20px;
   background-image: url("../svg/003-tumblr.svg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
   
 .copyright {
-  padding-bottom: 18px;
-  margin-top: 46px;
-  margin-left: 6px;
   align-items: center;
   justify-content: center;
   display: flex;
   max-width: 1200px;
-  height: 84px;
+  padding: 60px 0 40px 0;
   text-align: center;
 }
   
@@ -793,7 +784,7 @@
 }
 
 .popup-close {
-  right: 0px;
+  right: 0;
   top: -25px;
   width: 20px;
   height: 20px;
@@ -806,19 +797,12 @@
   z-index: 2;
   top: 0;
   left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
   display: flex;
 }
 
 ._hidden {
   display: none;
-}
-
-.popup-background {
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-  position: absolute;
-  z-index: 2;
 }
 
 .popup-form { 
@@ -841,7 +825,7 @@
 .feedback-comment {
   resize: none;
   background-color: #f4f7f6;
-  color: rgba(0, 0, 0, .54);
+  color: rgba(0, 0, 0, 0.5);
   padding: 18px 20px 25px 20px;
   border: none;
   outline: none;
@@ -858,7 +842,7 @@
 .feedback-send-button {
   height: 48px;
   width: 100%;               
-  border-radius: 0px;
+  border-radius: 0;
   background-color: #b59f5b;
   border: none;
   color: #ffffff;
@@ -908,7 +892,7 @@
   -webkit-appearance: none;
   -moz-appearance: none;
   border: none;
-  color: rgba(0, 0, 0, .54);
+  color: rgba(0, 0, 0, 0.5);
   padding-left: 18px;
   margin-top: 8px;
   margin-bottom: 32px;
@@ -954,10 +938,6 @@
     cursor: pointer;
     background-color: transparent;
   }
-
-  .menu-button-label {
-    margin-top: -2px;
-  }
         
   .menu-button-label, .menu-button::before, .menu-button::after {
     position: absolute;
@@ -971,7 +951,7 @@
       
   .menu-button::before {
     content: "";
-    top: 0px;
+    top: 0;
   }
   .menu-button::after {
     content: "";
@@ -1078,10 +1058,6 @@
     cursor: pointer;
     background-color: transparent;
   }
-
-  .menu-button-label {
-    margin-top: -2px;
-  }
       
   .menu-button-label, .menu-button::before, .menu-button::after {
     position: absolute;
@@ -1095,7 +1071,7 @@
       
   .menu-button::before {
     content: "";
-    top: 0px;
+    top: 0;
   }
   .menu-button::after {
     content: "";
